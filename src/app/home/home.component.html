@@ -1,0 +1,20 @@
+<form #todoForm="ngForm" >
+    <h3>Pinpoint Demo</h3>
+    <div class="form-group">
+      <label>Pinpoint Project Name</label>
+      <input type="text" class="form-control" name="name" [(ngModel)]="pinpoint.name">
+    </div>
+   
+    <!--We can use ngClass for class binding-->
+    <button  (click)="addProject(todoForm)" class="btn btn-default btn-block mb-3" >
+      Add New Project
+    </button>
+     
+  </form>
+   <ul >
+     <li *ngFor="let pinpoint of pinpoints">
+       Your Project Name is {{pinpoint.name}}
+      </li>
+   </ul>
+  
+  
